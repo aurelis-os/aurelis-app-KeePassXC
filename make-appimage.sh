@@ -6,8 +6,8 @@ ARCH=$(uname -m)
 VERSION=$(pacman -Q keepassxc | awk '{print $2; exit}') # example command to get version of application here
 export ARCH VERSION
 export OUTPATH=./dist
-export ADD_HOOKS="self-updater.hook"
-export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
+# export ADD_HOOKS="self-updater.hook"
+# export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
 export ICON=/usr/share/icons/hicolor/256x256/apps/keepassxc.png
 export DESKTOP=/usr/share/applications/org.keepassxc.KeePassXC.desktop
 export USE_HOST_DRIVERS_EXPERIMENTAL=1
@@ -21,7 +21,9 @@ quick-sharun \
 # Additional changes can be done in between here
 
 # Turn AppDir into AppImage
-quick-sharun --make-appimage
+GITHUB_REPOSITORY= quick-sharun --make-appimage
+rm -f ./dist/*.zsync
+sh ./pkg-meta.sh
 
 # Test the app for 12 seconds, if the test fails due to the app
 # having issues running in the CI use --simple-test instead

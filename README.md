@@ -1,42 +1,13 @@
-<div align="center">
+[![Version](https://img.shields.io/badge/version-2.7.12--5-blue)](https://github.com/keepassxreboot/keepassxc/releases/tag/2.7.12)
+[![Architecture](https://img.shields.io/badge/arch-x86__64-green)](https://en.wikipedia.org/wiki/X86-64)
+[![License](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)
 
-# KeePassXC-AppImage-Enhanced 🐧
+# KeePassXC
 
-[![GitHub Downloads](https://img.shields.io/github/downloads/pkgforge-dev/KeePassXC-AppImage-Enhanced/total?logo=github&label=GitHub%20Downloads)](https://github.com/pkgforge-dev/KeePassXC-AppImage-Enhanced/releases/latest)
-[![CI Build Status](https://github.com/pkgforge-dev/KeePassXC-AppImage-Enhanced/actions/workflows/appimage.yml/badge.svg)](https://github.com/pkgforge-dev/KeePassXC-AppImage-Enhanced/releases/latest)
-[![Latest Stable Release](https://img.shields.io/github/v/release/pkgforge-dev/KeePassXC-AppImage-Enhanced)](https://github.com/pkgforge-dev/KeePassXC-AppImage-Enhanced/releases/latest)
+KeePassXC is a modern, secure, and open-source password manager that stores and manages your most sensitive information. It runs on Windows, macOS, and Linux systems. KeePassXC is a community fork of KeePassX with a focus on cross-platform compatibility and modern features.
 
-<p align="center">
-  <img src="https://github.com/keepassxreboot/keepassxc/blob/develop/share/icons/application/256x256/apps/keepassxc.png?raw=true" width="128" />
-</p>
-
-
-| Latest Stable Release | Upstream URL |
-| :---: | :---: |
-| [Click here](https://github.com/pkgforge-dev/KeePassXC-AppImage-Enhanced/releases/latest) | [Click here](https://github.com/keepassxreboot/keepassxc) |
-
-Improved AppImage of KeePassXC **independent of the host libc** making it able to work on very very old distros as well as musl-libc distros like alpine linux.
-
-</div>
+This is an **Aurelis Linux package** built as an AppImage, but it can also run as a regular AppImage on any Linux distribution.
 
 ---
 
-AppImage made using [quick-sharun](https://github.com/pkgforge-dev/Anylinux-AppImages/blob/main/useful-tools/quick-sharun.sh), which makes it extremely easy to turn any binary into a portable package reliably without using containers or similar tricks. 
-
-**This AppImage bundles everything and it should work on any Linux distro, including old and musl-based ones.**
-
-This AppImage doesn't require FUSE to run at all, thanks to the [uruntime](https://github.com/VHSgunzo/uruntime).
-
-This AppImage is also supplied with a self-updater by default, so any updates to this application won't be missed, you will be prompted for permission to check for updates and if agreed you will then be notified when a new update is available.
-
-Self-updater is disabled by default if AppImage managers like [am](https://github.com/ivan-hc/AM), [soar](https://github.com/pkgforge/soar) or [dbin](https://github.com/xplshn/dbin) exist, which manage AppImage updates.
-
-<details>
-  <summary><b><i>raison d'être</i></b></summary>
-    <img src="https://github.com/user-attachments/assets/d40067a6-37d2-4784-927c-2c7f7cc6104b" alt="Inspiration Image">
-  </a>
-</details>
-
----
-
-More at: [AnyLinux-AppImages](https://pkgforge-dev.github.io/Anylinux-AppImages/)
+Thanx to: [AnyLinux-AppImages](https://pkgforge-dev.github.io/Anylinux-AppImages/)
