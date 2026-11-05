@@ -28,6 +28,16 @@ jobs:
         uses: pkgforge-dev/anylinux-setup-action@0964f2258d6c93d1391359978dde081fd8b3c6af # v2
       - name: Install Dependencies
         run: /bin/sh ./get-dependencies.sh
+      - name: Debug - Find KeePassXC paths
+        run: |
+          echo "=== KeePassXC package contents ==="
+          pacman -Ql keepassxc | head -50
+          echo "=== /usr/lib/keepassxc* ==="
+          ls -la /usr/lib/keepassxc* 2>/dev/null || echo "Not found"
+          echo "=== /usr/lib/ ==="
+          ls -la /usr/lib/ | grep -i keepass
+          echo "=== /usr/bin/keepassxc* ==="
+          ls -la /usr/bin/keepassxc*
       - name: Make AppImage
         run: /bin/sh ./make-appimage.sh
       - name: Upload artifact
